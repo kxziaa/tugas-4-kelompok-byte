@@ -1,13 +1,12 @@
 import React, {useState} from "react";
 import {Link} from  'react-scroll';
-import { NavLink } from "react-router-dom";
 
 const Nav = () => {
 
     const[nav, setNav] = useState(false)
     const handleClick = () => setNav(!nav)
     return(
-        <div className="w-screen h-[70px] bg-transparent drop-shadow-lg fixed">
+        <header className="w-screen h-[70px] bg-transparent drop-shadow-lg absolute">
             <div className=" w-full h-full px-5 sm:px-10 flex justify-between items-center ">
                 
                 <a href="/" className="text-2xl font-bold">MAHESA.</a>
@@ -20,13 +19,13 @@ const Nav = () => {
                     <Link to="budaya" spy={true} smooth={true} offset={50} duration={500}>Budaya</Link>
                   </li>
                   <li>
-                  <Link to="budaya" spy={true} smooth={true} offset={50} duration={500}>Kuliner</Link>
+                  <Link to="kuliner" spy={true} smooth={true} offset={50} duration={500}>Kuliner</Link>
                   </li>
                   <li>
                   <Link to="rekreasi" spy={true} smooth={true} offset={50} duration={500}>Rekreasi</Link>
                   </li>
                   <li>
-                    <a href="/Galeri">Galeri</a>
+                  <Link to="galeri" spy={true} smooth={true} offset={50} duration={500}>Galeri</Link>
                   </li>
                 </ul>
                 </div>
@@ -86,7 +85,7 @@ const Nav = () => {
                     </button>
                 </div>
             </div>
-        </div>   
+        </header>   
     )
 } 
 
