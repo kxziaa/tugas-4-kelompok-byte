@@ -88,8 +88,6 @@ function Home() {
       </section>
       <Galeri />
       <Footer />
-
-
     </>
   );
 }
